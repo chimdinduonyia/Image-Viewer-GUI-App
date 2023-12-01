@@ -33,13 +33,13 @@ def select_image():
 
     #the filetypes to be accepted and passed into the filetypes attribute
     filetypes = (
-        ("jpg files", "*.jpg"),
         ("png files", "*.png"),
+        ("jpg files", "*.jpg"),
         ("All files", "*.*")
     )
     #Provides dialog and casts selections to a tuple which is stored as the variable filename
     filename = filedialog.askopenfilenames(title="Select Images",
-                                           initialdir="C://Users/USER/Documents/PYTHON PROJECTS/Images", filetypes=filetypes)
+                                           initialdir="./Images", filetypes=filetypes)
     #Iterate through filename, check if there are duplicates by comparing paths to the name_list and add images to image_list
     for file in filename:
         if file not in name_list:
